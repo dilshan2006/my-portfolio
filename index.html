@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nethaga Diloshan | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+    <img src="images/profile.jpg" alt="Nethaga Diloshan" class="profile-img">
+    <h1>Nethaga Diloshan</h1>
+    <p>NVQ Level 4 Computer Hardware Technician</p>
+</header>
+
+<div class="tabs">
+    <button class="tab-btn active" data-tab="about">About Me</button>
+    <button class="tab-btn" data-tab="skills">Skills</button>
+    <button class="tab-btn" data-tab="portfolio">Portfolio</button>
+    <button class="tab-btn" data-tab="contact">Contact</button>
+</div>
+
+<section id="about" class="tab-content active">
+    <h2>About Me</h2>
+    <p>
+        I am a qualified Computer Hardware Technician with experience in
+        computer and laptop repairs, CCTV installation, and IT support.
+        I am passionate about technology and delivering quality service.
+    </p>
+</section>
+
+<section id="skills" class="tab-content">
+    <h2>Skills</h2>
+    <ul>
+        <li>Computer & Laptop Repair</li>
+        <li>CCTV Installation & Maintenance</li>
+        <li>Basic Networking</li>
+        <li>Hardware Troubleshooting</li>
+        <li>Customer Support</li>
+    </ul>
+</section>
+
+<section id="portfolio" class="tab-content">
+    <h2>Portfolio</h2>
+    <p>✔ Computer & Laptop Repair Projects</p>
+    <p>✔ CCTV Installation Projects</p>
+    <p>✔ IT Support Services</p>
+</section>
+
+<section id="contact" class="tab-content">
+    <h2>Contact Me</h2>
+    <p>Email: your@email.com</p>
+    <p>Phone: 07XXXXXXXX</p>
+
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="btn linkedin">LinkedIn</a>
+        <a href="https://www.facebook.com/yourprofile" target="_blank" class="btn facebook">Facebook</a>
+        <a href="https://www.tiktok.com/@yourprofile" target="_blank" class="btn tiktok">TikTok</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Nethaga Diloshan. All Rights Reserved.</p>
+</footer>
+
+<script>
+    const tabs = document.querySelectorAll(".tab-btn");
+    const contents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            tabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+
+            contents.forEach(c => c.classList.remove("active"));
+            document.getElementById(tab.dataset.tab).classList.add("active");
+        });
+    });
+</script>
+
+</body>
+</html>
